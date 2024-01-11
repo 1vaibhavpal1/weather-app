@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.weather-container{
+    margin-block: 4rem;
+}
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    color: #F9F7F7;
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+h1{
+    text-align: center;
+    margin-block: 2rem;
+    word-spacing: 2px;
+    letter-spacing: 1.75px;
+}
+.tab-container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    justify-content: space-between;
+}
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+.tab.current-tab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.weather-container{
+    margin-block: 4rem;
+}
+.name p{
+    font-size: 2rem;
+}
+.name img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.sub-container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+}
+.user-info-container p[data-item]{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+.parameter-container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px 20px;
+}
+.parameter-title{
+    text-transform: uppercase;
+}
+.parameter{
+    width: 30%;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+    max-width: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px 0;
+}
+.parameter img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+/* location access*/
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: flex;
+}
+.grant-location-container img{
+    height: 80px;
+    width: 80px;
+    aspect-ratio: auto 80/80;
+    margin-bottom: 2rem;
+}
+.heading{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+p[data-allowAccess]{
+    margin-bottom: 1.5rem;
+}
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3F72AF;
+}
+
+/* Loading Screen Container- */ 
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+
+/* search country form */
+/* .form-container{
+    display: none;
+} */
+.form-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.form-container input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.form-container .btn {
+    width: 40px;
+    height: 40px;
+    padding: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.api-error-container{
+    display: none;
+
+}
+.api-error-container p{
+    text-align: center;
+}
+.api-error-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+}
+.api-error-container img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
